@@ -68,7 +68,7 @@ paicoding-ui               # UI 模块（Thymeleaf 模板、前端资源）
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/Newbie-RoleNewbie-Role/paicoding.git
+git clone https://github.com/your-username/paicoding.git
 
 # 2. 进入项目目录
 cd paicoding
@@ -161,4 +161,7 @@ java -jar paicoding-web/target/paicoding-web-1.0.0.jar
 
 MIT License
 
+## 项目地址
+
+- GitHub: [https://github.com/Newbie-Role/paicoding](https://github.com/NewbieRole/paicoding)
 
