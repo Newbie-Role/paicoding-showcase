@@ -35,6 +35,12 @@
 - jQuery
 - Editor.md
 
+## GitHub Pages
+
+- **展示页面**：[https://newbie-role.github.io/paicoding-showcase/](https://newbie-role.github.io/paicoding-showcase/)
+ ## 项目地址
+- GitHub: [https://github.com/Newbie-Role/paicoding](https://github.com/NewbieRole/paicoding)
+
 ## 项目结构
 
 ```
@@ -161,7 +167,4 @@ java -jar paicoding-web/target/paicoding-web-1.0.0.jar
 
 MIT License
 
-## 项目地址
-
-- GitHub: [https://github.com/Newbie-Role/paicoding](https://github.com/NewbieRole/paicoding)
 
