@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术派 - 技术内容分享平台</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        /* 导航栏 */
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        nav li {
+            padding: 15px 20px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #667eea;
+        }
+        /* 内容区域 */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        /* 功能特性 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            text-align: center;
+        }
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        /* 技术栈 */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .tech-item {
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        /* 代码块 */
+        .code-block {
+            background: #f8f8f8;
+            border: 1px solid #eaeaea;
+            border-radius: 4px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .code-block pre {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+        /* 底部 */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <h1>技术派</h1>
+            <p>基于 Spring Boot 的技术内容分享社区平台</p>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#intro">项目简介</a></li>
+                <li><a href="#features">核心功能</a></li>
+                <li><a href="#tech">技术栈</a></li>
+                <li><a href="#quickstart">快速开始</a></li>
+                <li><a href="#structure">项目结构</a></li>
+                <li><a href="#contribute">贡献指南</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 项目简介 -->
+    <section id="intro">
+        <div class="container">
+            <h2 class="section-title">项目简介</h2>
+            <div class="card">
+                <p>技术派是一个专注于技术内容分享的社区平台，旨在为开发者提供一个高质量的技术交流空间。平台支持文章发布、评论互动、用户管理等功能，采用模块化架构设计，具有良好的扩展性和可维护性。</p>
+                <p>项目目标：打造一个技术人员乐于分享、交流的社区，促进技术知识的传播和创新。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">核心功能</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <h4>文章管理</h4>
+                    <p>支持发布、编辑、删除技术文章，支持 Markdown 格式，提供富文本编辑器</p>
+                </div>
+                <div class="feature-item">
+                    <h4>用户系统</h4>
+                    <p>完整的用户注册、登录、个人资料管理功能，支持第三方登录</p>
+                </div>
+                <div class="feature-item">
+                    <h4>互动功能</h4>
+                    <p>文章评论、点赞、收藏、关注等社交功能，增强用户粘性</p>
+                </div>
+                <div class="feature-item">
+                    <h4>搜索系统</h4>
+                    <p>基于 ElasticSearch 的全文搜索功能，快速定位相关内容</p>
+                </div>
+                <div class="feature-item">
+                    <h4>文件上传</h4>
+                    <p>支持图片上传、文件管理，提供本地存储和云存储选项</p>
+                </div>
+                <div class="feature-item">
+                    <h4>系统管理</h4>
+                    <p>后台管理系统，支持用户管理、内容审核、数据统计等功能</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术栈 -->
+    <section id="tech">
+        <div class="container">
+            <h2 class="section-title">技术栈</h2>
+            <div class="card">
+                <h3>后端技术</h3>
+                <div class="tech-stack">
+                    <span class="tech-item">Spring Boot 2.7.1</span>
+                    <span class="tech-item">Java 8+</span>
+                    <span class="tech-item">MyBatis-Plus</span>
+                    <span class="tech-item">MySQL</span>
+                    <span class="tech-item">Redis</span>
+                    <span class="tech-item">ElasticSearch</span>
+                    <span class="tech-item">RabbitMQ</span>
+                    <span class="tech-item">MongoDB</span>
+                    <span class="tech-item">Liquibase</span>
+                </div>
+                <h3 style="margin-top: 30px;">前端技术</h3>
+                <div class="tech-stack">
+                    <span class="tech-item">Thymeleaf</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">jQuery</span>
+                    <span class="tech-item">Editor.md</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 快速开始 -->
+    <section id="quickstart" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">快速开始</h2>
+            <div class="card">
+                <h3>环境要求</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>JDK 8+</li>
+                    <li>Maven 3.6+</li>
+                    <li>MySQL 5.7+</li>
+                    <li>Redis (可选，用于缓存)</li>
+                    <li>ElasticSearch (可选，用于搜索)</li>
+                    <li>RabbitMQ (可选，用于消息队列)</li>
+                    <li>MongoDB (可选，用于 NoSQL 存储)</li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">安装步骤</h3>
+                <div class="code-block">
+                    <pre>
+# 1. 克隆仓库
+git clone https://github.com/your-username/paicoding.git
+
+# 2. 进入项目目录
+cd paicoding
+
+# 3. 构建项目
+mvn clean package
+
+# 4. 运行项目
+java -jar paicoding-web/target/paicoding-web-1.0.0.jar
+
+# 5. 访问项目
+# 浏览器打开: http://localhost:8080
+                    </pre>
+                </div>
+
+                <h3 style="margin-top: 30px;">配置说明</h3>
+                <p>项目配置文件位于 <code>paicoding-web/src/main/resources-env/</code> 目录，根据环境选择对应配置：</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><code>dev</code>：开发环境</li>
+                    <li><code>test</code>：测试环境</li>
+                    <li><code>pre</code>：预发环境</li>
+                    <li><code>prod</code>：生产环境</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目结构 -->
+    <section id="structure">
+        <div class="container">
+            <h2 class="section-title">项目结构</h2>
+            <div class="card">
+                <div class="code-block">
+                    <pre>
+paicoding-web              # Web 模块（控制器、REST 端点）
+├── depends on: paicoding-ui, paicoding-service
+│
+paicoding-service          # 服务模块（业务逻辑）
+├── depends on: paicoding-core, paicoding-api
+│
+paicoding-core             # 核心模块（工具类、通用组件）
+├── depends on: paicoding-api
+│
+paicoding-api              # API 模块（实体、DTO、VO、枚举）
+└── (base module: entities, DTOs, VOs, enums)
+
+paicoding-ui               # UI 模块（Thymeleaf 模板、前端资源）
+                    </pre>
+                </div>
+                <p><strong>模块职责说明：</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>paicoding-api</strong>：基础模块，定义实体类、数据传输对象等</li>
+                    <li><strong>paicoding-core</strong>：核心工具类，包括缓存、搜索、推荐等功能</li>
+                    <li><strong>paicoding-service</strong>：业务逻辑层，处理核心业务流程</li>
+                    <li><strong>paicoding-ui</strong>：前端资源，包括 Thymeleaf 模板、JS、CSS 等</li>
+                    <li><strong>paicoding-web</strong>：Web 层，处理 HTTP 请求，提供 REST 接口</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 贡献指南 -->
+    <section id="contribute" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">贡献指南</h2>
+            <div class="card">
+                <p>欢迎通过以下方式贡献项目：</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>提交 Issue 报告 bug 或建议新功能</li>
+                    <li>提交 Pull Request 修复 bug 或添加新功能</li>
+                    <li>改进文档和示例</li>
+                    <li>分享项目，帮助更多开发者了解技术派</li>
+                </ul>
+                <h3 style="margin-top: 30px;">代码规范</h3>
+                <p>请遵循以下代码规范：</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>使用 Java 8+ 语法</li>
+                    <li>遵循 Spring Boot 编码规范</li>
+                    <li>添加适当的注释和文档</li>
+                    <li>确保代码通过单元测试</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 技术派 - 技术内容分享平台</p>
+            <p>GitHub 仓库：<a href="https://github.com/Newbie-Role/paicoding" style="color: #667eea; text-decoration: none;">github.com/Newbie-Role/paicoding</a></p>
+        </div>
+    </footer>
+</body>
+</html>
