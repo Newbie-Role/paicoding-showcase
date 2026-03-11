@@ -1,4 +1,4 @@
-# 技术派 - 技术内容分享平台
+# 技术派 - 技术分享平台
 
 基于 Spring Boot 的社区平台，用于技术内容分享。
 
@@ -39,7 +39,7 @@
 
 - **展示页面**：[https://newbie-role.github.io/paicoding-showcase/](https://newbie-role.github.io/paicoding-showcase/)
  ## 项目地址
-- GitHub: [https://github.com/Newbie-Role/paicoding](https://github.com/NewbieRole/paicoding)
+- **GitHub**: [https://github.com/Newbie-Role/paicoding](https://github.com/NewbieRole/paicoding)
 
 ## 项目结构
 
