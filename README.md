@@ -163,8 +163,5 @@ java -jar paicoding-web/target/paicoding-web-1.0.0.jar
 - 改进文档和示例
 - 分享项目，帮助更多开发者了解技术派
 
-## 许可证
-
-MIT License
 
 
